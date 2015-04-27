@@ -1,3 +1,4 @@
+/*
 import java.util.ArrayList; 
 
 public class Card extends CardDeck
@@ -22,7 +23,7 @@ public class Card extends CardDeck
        When the player draws a card, 
        he/she loses one from the deck
     */
-    public CardDeck Draw()
+/*  public CardDeck Draw()
     {
 	return contents.remove[0]; 
 	
@@ -32,9 +33,10 @@ public class Card extends CardDeck
        adds a card to his/her deck
        @param newCard
     */
-    public void Win(CardDeck newCard)
+/*  public void Win(CardDeck newCard)
     {
 	contents.add(newCard); 
     }
     Collection.shuffle(deck, new Random(System.
 }
+*/
