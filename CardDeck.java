@@ -139,12 +139,13 @@ public class CardDeck
             stringBuilder.append( "spades" );
             break;
 	}
-	String totalString= rankString + " of " + suitString;
-        return stringBuilder.toString( ) + totalString; 
-	
+	String totalString= rankString  + suitString;
+	// return stringBuilder.toString( ) + totalString; 
+	return totalString; 
 
-    }    
-	
+    }   
+
+   
     /**
        THis method is designed to make sure the card drawn is accurate
        @param true || false
