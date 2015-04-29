@@ -40,7 +40,7 @@ public class CardDeck
     public CardDeck(int suit, int rank/* int card*/)
     {
 
-	super(); 
+	 
 	this.suit= suit;
 	this.rank=rank;
 	//this.card = card;
@@ -139,7 +139,7 @@ public class CardDeck
             stringBuilder.append( "spades" );
             break;
 	}
-	String totalString= rankString  + suitString + ".jpg"; 
+	String totalString= rankString  + suitString;
 	// return stringBuilder.toString( ) + totalString; 
 	return totalString; 
 
@@ -162,4 +162,10 @@ public class CardDeck
 	    }
     }
 
+    public static void main(String[] args)
+    {
+	
+	CardDeck card = new CardDeck(3, 3); 
+	card.toString(); 
+    }
 }

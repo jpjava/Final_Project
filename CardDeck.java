@@ -40,7 +40,7 @@ public class CardDeck
     public CardDeck(int suit, int rank/* int card*/)
     {
 
-	super(); 
+	 
 	this.suit= suit;
 	this.rank=rank;
 	//this.card = card;
@@ -91,13 +91,13 @@ public class CardDeck
 	switch(suit)
 	    {
 	    case SPADES:
-		suitString="SPADE";
+		suitString=" SPADE";
 		break; 
 	    case CLUBS:
 		suitString=" CLUBS";
 		break;
 	    case HEARTS:
-		suitString="HEARTS" ;
+		suitString=" HEARTS" ;
 		break;
 	    case DIAMONDS:
 		suitString=" DIAMONDS" ;
@@ -162,4 +162,10 @@ public class CardDeck
 	    }
     }
 
+    public static void main(String[] args)
+    {
+	
+	CardDeck card = new CardDeck(3, 3); 
+	card.toString(); 
+    }
 }
