@@ -91,7 +91,7 @@ public class Deck
 	*/
 	if (drHortonDraw.getRank() > lilyDraw.getRank()) 
 	    {
-		 b = 1; 
+		b = 1; 
 		drHorton.addLast(drHortonDraw); 
 		drHorton.addLast(lilyDraw);
 		
@@ -99,7 +99,7 @@ public class Deck
 		System.out.println("Dr.Horton Wins"); 
 		
 		
-		drHortonWhoWon(); 
+		
 	    }
 	/**
 	   what happens when lily wins
@@ -110,12 +110,13 @@ public class Deck
 		lily.addLast(lilyDraw); 
 		System.out.println("Lily Wins!!!!"); 
 		
-		 b = 2; 
+		b = 2; 
 		
 
 	    }
 	else 
 	    {
+		b=3;
 		takeTurn();
 	    }
 		
@@ -220,7 +221,9 @@ public class Deck
 		break; 
 	    case 2: 
 		whoWon = "Lily won the round"; 
-		break; 
+		break;
+	    case 3: 
+		whoWon = "War! Each Player will throw down another card!!";
 	    default:
 		System.out.print("Something has gone terribly wrong!!");
 
@@ -228,6 +231,8 @@ public class Deck
 	return whoWon; 
     }
 }
+
+
 
 
 

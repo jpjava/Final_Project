@@ -20,7 +20,7 @@ public class CardDeck
     public static final int CLUBS=1;
     public static final int HEARTS=2;
     public static final int DIAMONDS=3;
-    public static final int ACE =14;
+    public static final int ACE =1;
     public static final int JACK= 11;
     public static final int QUEEN=12;
     public static final int KING=13;
@@ -126,19 +126,19 @@ public class CardDeck
 
  	switch ( suit )
 	    {
-	case 2 :
-            stringBuilder.append( "hearts" );
-            break;
-	case 3 :
-            stringBuilder.append( "diamonds" );
-            break;
-	case 1 :
-            stringBuilder.append( "clubs" );
-            break;
-	case 0 :
-            stringBuilder.append( "spades" );
-            break;
-	}
+	    case 2 :
+		stringBuilder.append( "hearts" );
+		break;
+	    case 3 :
+		stringBuilder.append( "diamonds" );
+		break;
+	    case 1 :
+		stringBuilder.append( "clubs" );
+		break;
+	    case 0 :
+		stringBuilder.append( "spades" );
+		break;
+	    }
 	String totalString= rankString  + suitString;
 	// return stringBuilder.toString( ) + totalString; 
 	return totalString; 

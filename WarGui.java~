@@ -16,7 +16,7 @@ public class WarGui extends JFrame
     private JPanel topPanel, gamePanel;
     private JLabel card1, card2; 
     
-    private JButton button1, button2; //so there are 2 buttons
+    private JButton button1; //button2; //so there are 2 buttons
     private JLabel status; //game status
     private JLabel title; //static title
     private Deck game;
@@ -43,18 +43,22 @@ public class WarGui extends JFrame
 	add(gamePanel); 
 	
 	button1 = new JButton("Draw"); 
-	button2 = new JButton("Shuffle"); 
+	//button2 = new JButton("Shuffle"); 
     
 	button1.addActionListener(new ButtonListener());  
 	//button2.addActionListener(new ButtonListener2());
     
-	title = new JLabel("This Means WAR!!!!!"); 
+	title = new JLabel("<html>This Means WAR!!!!! My favorite Professor is Dr. Horton" +
+   "<br>and my favorite grader is Lily. Today the 2 of them"
+   + "<br> are going to be playing the" 
+   + "game war against each other<html>"); 
 	title.setFont(new Font("HELVETICA", Font.ITALIC, 36)); 
 	topPanel.add(title);
     
 	status = new JLabel("Game in prgoress"); 
 	status.setFont(new Font("ARIAL", Font.ITALIC, 36));
 	topPanel.add(title); 
+   topPanel.add(status); 
     	
 	ImageIcon bug = new ImageIcon("back.jpg");
 
@@ -63,11 +67,11 @@ public class WarGui extends JFrame
      
 	gamePanel.add(card1);
 	
-	card2 = new JLabel("Lily's deck", bug, SwingConstants.LEFT); 
+	card2 = new JLabel("Lily's deck", bug, SwingConstants.RIGHT); 
 	gamePanel.add(card2); 
    
 	gamePanel.add(button1); 
-	gamePanel.add(button2); 
+	//gamePanel.add(button2); 
     }
 
     private class ButtonListener implements ActionListener
@@ -77,22 +81,26 @@ public class WarGui extends JFrame
 	{	 
 	    if ((game.drHortonGetSize() >=0)||(game.lilyGetSize()==0))
 		{
-         game.singleRound();
-	      String s = game.getFaceUp(1).toString()+".jpg";
-	      System.out.println(s);
-	      card1.setIcon(new ImageIcon(game.getFaceUp(1).toString()+".jpg"));
-	      card2.setIcon(new ImageIcon(game.getFaceUp(2).toString()+".jpg"));	         
-	    if ((game.drHortonGetSize() ==0)||(game.lilyGetSize()==0))
-		{
-		    status = new JLabel(game.getWinner());
-		    topPanel.add(status); 
+		    game.singleRound();
+		    String s = game.getFaceUp(1).toString()+".jpg";
+		    System.out.println(s);
+		    card1.setIcon(new ImageIcon(game.getFaceUp(1).toString()+".jpg"));
+		    card2.setIcon(new ImageIcon(game.getFaceUp(2).toString()+".jpg"));
+          status.setText(game.drHortonWhoWon());	         
+		    if ((game.drHortonGetSize() ==0)||(game.lilyGetSize()==0))
+			{   
+             status.setText(game.drHortonWhoWon()); 
+			    status.setText(game.getWinner());
+			    topPanel.add(status); 
+             button1.setEnabled(false);
+			}
 		}
-         }
-         else 
-         {
-         status = new JLabel("someone does not have cards!");
+	    else 
+		{
+		    status = new JLabel("someone does not have cards!");
 		    topPanel.add(status); 
-          }
+          
+		}
 
 	}
 	private class ButtonListener2 implements ActionListener
@@ -110,5 +118,6 @@ public class WarGui extends JFrame
 }
 
 		
+
 	    
 		

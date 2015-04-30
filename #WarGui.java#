@@ -26,6 +26,9 @@ public class WarGui extends JFrame
     {  
    
 	//Start the game  
+	/**
+	   Constructor
+	*/
 	game = new Deck();
 	
    
