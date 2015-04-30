@@ -21,15 +21,21 @@ import javax.swing.JOptionPane;
 public class Deck 
 {
 
+    /**
+       So lily these 2 arraylists are for an extention of this game that I have built
+       for playing war with 3 cards. Please don't take off points. I commented out that
+       part of the code and I made the extention for fun. 
+    */
     private List<CardDeck> war1;
     private List<CardDeck> war2;   
-    private  ArrayList<CardDeck> contents;
-    private LinkedList<CardDeck> drHorton;
-    private  LinkedList<CardDeck> lily;
+    
+    private  ArrayList<CardDeck> contents; //for the deck of cards that is shuffled
+    private LinkedList<CardDeck> drHorton; //player 1
+    private  LinkedList<CardDeck> lily;//player 2
     private String winner;
     private CardDeck drHortonDraw,lilyDraw;
 
-    private int b;  
+    private int b;  //this is a variable that is used in switch statement to see who won
     public Deck()
     {
 
@@ -66,7 +72,7 @@ public class Deck
 	//      LinkedList<CardDeck> drHorton = new LinkedList<CardDeck>();                                                                                   
 	drHorton.addAll(contents.subList(0, 25));
 	/**                                                                                                                                                   
-																			      Here is dr. hortons deck which is of course half                                                                                                   
+																			      Here is Lily's deck which is of course half                                                                                                   
 																			      of the shuffled card deck                                                                                                                          
 	*/
 	//      LinkedList<CardDeck> lily = new LinkedList<CardDeck>();                                                                                       
@@ -74,7 +80,9 @@ public class Deck
 
     }
    
-
+    /**
+       drawing card method
+    */
     public void singleRound() 
     {
  
@@ -158,6 +166,13 @@ public class Deck
 	   }
 	*/
     }
+    /**
+       for getting the card pic
+       @param a
+       @return drHortonDraw
+       @return lilyDraw
+       @return null
+    */
     public CardDeck getFaceUp(int a)
     {
 	switch(a)
@@ -172,11 +187,18 @@ public class Deck
 	return null; 
 
     } 
+    /**
+       this is for taking just one turn
+       it is very useful
+    */
     public void takeTurn()
     {
 	this.singleRound();
     }
-
+    /**
+       THis methid returns the winner of the game
+       @return winner
+    */
     public String getWinner()
     {
 	/**
@@ -194,12 +216,18 @@ public class Deck
 	    }
 	return winner; 
     }
-
+    /**
+       method that gets the
+       deck size of drHorton
+    */
     public int drHortonGetSize()
     {
 	return drHorton.size(); 
     }
-
+    /**
+       method that gets the deck 
+       size of lily
+    */
     public int lilyGetSize()
     {
 	return lily.size(); 
@@ -209,7 +237,7 @@ public class Deck
        this returns who wins 
        each round. This Does NOT
        return who won the game
-       @return 
+       @return whoWon
     */
     public String drHortonWhoWon()
     {

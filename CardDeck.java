@@ -161,11 +161,8 @@ public class CardDeck
 		return true;
 	    }
     }
-
-    public static void main(String[] args)
-    {
-	
-	CardDeck card = new CardDeck(3, 3); 
-	card.toString(); 
-    }
+   
+     
 }
+
+

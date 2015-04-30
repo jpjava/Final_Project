@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.*;
 import javax.swing.JOptionPane;
 
-public class  DeletethisShit
+public class  WARmethod
 {
 
     public static void main(String[] args)

@@ -26,11 +26,15 @@ public class WarGui extends JFrame
     {  
    
 	//Start the game  
+	/**
+	   Constructor
+	*/
 	game = new Deck();
 	
-   
+	
 	setLayout(new GridLayout(2,2)); 
-	//game = new Deck();//
+	
+	//my panel
 	topPanel = new JPanel(); 
 	topPanel.setBackground(Color.GREEN); //Since Dr. Horton's favorite color is green
 	topPanel.setLayout(new FlowLayout());
@@ -39,6 +43,7 @@ public class WarGui extends JFrame
 	gamePanel = new JPanel(); 
 	gamePanel.setBackground(Color.CYAN); 
    
+	//add both panels
 	add(topPanel); 
 	add(gamePanel); 
 	
@@ -48,6 +53,7 @@ public class WarGui extends JFrame
 	button1.addActionListener(new ButtonListener());  
 	//button2.addActionListener(new ButtonListener2());
     
+	//love this title
 	title = new JLabel("<html>This Means WAR!!!!! My favorite Professor is Dr. Horton" +
 			   "<br>and my favorite grader is Lily. Today the 2 of them"
 			   + "<br> are going to be playing the" 
@@ -62,7 +68,7 @@ public class WarGui extends JFrame
     	
 	ImageIcon bug = new ImageIcon("back.jpg");
 
-	//Icon bug = new ImageIcon(getClass().getResource("back.jpg"));
+	
 	card1 = new JLabel("Dr.Horton's deck", bug, SwingConstants.LEFT); 
      
 	gamePanel.add(card1);
@@ -71,9 +77,13 @@ public class WarGui extends JFrame
 	gamePanel.add(card2); 
    
 	gamePanel.add(button1); 
-	//gamePanel.add(button2); 
+       
     }
 
+    /**
+       Private inner class that handles the event when the 
+       user clicks one of the check boxes.
+    */
     private class ButtonListener implements ActionListener
     {
 
@@ -103,17 +113,7 @@ public class WarGui extends JFrame
 		}
 
 	}
-	private class ButtonListener2 implements ActionListener
-	{
-	    public void actionPerformed (ActionEvent e)
-	    {
-		// while ((card1.setIcon(new ImageIcon(game.getFaceUp(1).toString() + ".jpg"))) ||(card2.setIcon(new ImageIcon(game.getFaceUp(2).toString()+".jpg")))); 
-		{
-		    //       topPanel.add(game.getWinner()); 
-		}
-      
-	    }
-	}
+	
     }
 }
 

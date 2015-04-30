@@ -126,19 +126,19 @@ public class CardDeck
 
  	switch ( suit )
 	    {
-	case 2 :
-            stringBuilder.append( "hearts" );
-            break;
-	case 3 :
-            stringBuilder.append( "diamonds" );
-            break;
-	case 1 :
-            stringBuilder.append( "clubs" );
-            break;
-	case 0 :
-            stringBuilder.append( "spades" );
-            break;
-	}
+	    case 2 :
+		stringBuilder.append( "hearts" );
+		break;
+	    case 3 :
+		stringBuilder.append( "diamonds" );
+		break;
+	    case 1 :
+		stringBuilder.append( "clubs" );
+		break;
+	    case 0 :
+		stringBuilder.append( "spades" );
+		break;
+	    }
 	String totalString= rankString  + suitString;
 	// return stringBuilder.toString( ) + totalString; 
 	return totalString; 
@@ -161,11 +161,7 @@ public class CardDeck
 		return true;
 	    }
     }
-
-    public static void main(String[] args)
-    {
-	
-	CardDeck card = new CardDeck(3, 3); 
-	card.toString(); 
-    }
+   
+     
 }
+

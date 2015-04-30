@@ -49,16 +49,16 @@ public class WarGui extends JFrame
 	//button2.addActionListener(new ButtonListener2());
     
 	title = new JLabel("<html>This Means WAR!!!!! My favorite Professor is Dr. Horton" +
-   "<br>and my favorite grader is Lily. Today the 2 of them"
-   + "<br> are going to be playing the" 
-   + "game war against each other<html>"); 
+			   "<br>and my favorite grader is Lily. Today the 2 of them"
+			   + "<br> are going to be playing the" 
+			   + "game war against each other<html>"); 
 	title.setFont(new Font("HELVETICA", Font.ITALIC, 36)); 
 	topPanel.add(title);
     
 	status = new JLabel("Game in prgoress"); 
 	status.setFont(new Font("ARIAL", Font.ITALIC, 36));
 	topPanel.add(title); 
-   topPanel.add(status); 
+	topPanel.add(status); 
     	
 	ImageIcon bug = new ImageIcon("back.jpg");
 
@@ -86,13 +86,13 @@ public class WarGui extends JFrame
 		    System.out.println(s);
 		    card1.setIcon(new ImageIcon(game.getFaceUp(1).toString()+".jpg"));
 		    card2.setIcon(new ImageIcon(game.getFaceUp(2).toString()+".jpg"));
-          status.setText(game.drHortonWhoWon());	         
+		    status.setText(game.drHortonWhoWon());	         
 		    if ((game.drHortonGetSize() ==0)||(game.lilyGetSize()==0))
 			{   
-             status.setText(game.drHortonWhoWon()); 
+			    status.setText(game.drHortonWhoWon()); 
 			    status.setText(game.getWinner());
 			    topPanel.add(status); 
-             button1.setEnabled(false);
+			    button1.setEnabled(false);
 			}
 		}
 	    else 
