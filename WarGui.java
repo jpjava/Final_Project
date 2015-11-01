@@ -1,5 +1,4 @@
 /**
-   Justin Pappano
    My Card GUI!!!!!
    CS110
 */
