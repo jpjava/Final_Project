@@ -1,5 +1,4 @@
 /**
-   Justin Pappano
    CS110
    Final Project
 
@@ -38,7 +37,8 @@ public class Deck
     private int b;  //this is a variable that is used in switch statement to see who won
     public Deck()
     {
-
+  
+  
 	/**
 	   put all of the cards from the CardDeck into a class
 	*/
